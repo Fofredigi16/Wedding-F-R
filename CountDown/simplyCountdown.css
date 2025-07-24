@@ -1,0 +1,28 @@
+.simply-countdown {
+  display: flex;
+  flex-wrap: wrap; /* Ini memungkinkan baris baru */
+  justify-content: center;
+  gap: 50px; /* Jarak antar kotak */
+  max-width: 300px; /* Sesuaikan lebar agar otomatis turun ke bawah */
+  margin: auto;
+}
+.simply-countdown > .simply-section {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+}
