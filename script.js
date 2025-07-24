@@ -1,36 +1,13 @@
-window.addEventListener("DOMContentLoaded", function () {
-  const lihatBtn = document.getElementById("lihatUndangan");
-  const landing = document.getElementById("landing");
-  const mainContent = document.getElementById("mainContent");
+/* Slide Hal1 ke Hal2 */
+const lihatBtn = document.getElementById("lihatUndangan");
+const landing = document.getElementById("landing");
+const mainContent = document.getElementById("mainContent");
 
-  lihatBtn.addEventListener("click", function () {
-    landing.style.display = "none";
-    mainContent.classList.add("visible");
-    mainContent.style.display = "flex";
-
-    // Tampilkan dekorasi
-    document.querySelectorAll(".corner-deco").forEach((el) => {
-      el.classList.remove("hidden-deco");
-      el.classList.add("visible-deco");
-    });
-
-    AOS.refresh();
-    document.getElementById("navbar").classList.remove("hidden");
-  });
-});
-
-/* Sticky Top */
-const navbar = document.getElementById("navbar");
-const triggerPoint = document.getElementById("Journey"); // saat mulai sticky
-
-window.addEventListener("scroll", () => {
-  const triggerTop = triggerPoint.getBoundingClientRect().top;
-
-  if (triggerTop <= 0) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+lihatBtn.addEventListener("click", function () {
+  landing.style.display = "none"; // langsung hilang tanpa animasi
+  mainContent.classList.add("visible"); // muncul dengan fade-in
+  AOS.refresh();
+  document.getElementById("navbar").classList.remove("hidden");
 });
 
 /* List RSVP */
@@ -155,15 +132,10 @@ window.addEventListener("scroll", () => {
 
 /* Distribusi */
 // Ambil parameter dari URL
-document.addEventListener("DOMContentLoaded", function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const gst = urlParams.get("to");
-
-  if (gst) {
-    const decodedName = decodeURIComponent(gst.replace(/\+/g, " "));
-    const namaSpan = document.getElementById("gstName");
-    if (namaSpan) {
-      namaSpan.textContent = decodedName;
-    }
-  }
-});
+const urlParams = new URLSearchParams(window.location.search);
+const gst = urlParams.get("to");
+// Tampilkan nama jika ada
+if (gst) {
+  const decodedName = decodeURIComponent(gst.replace(/\+/g, " "));
+  document.getElementById("gstName").textContent = decodedName;
+}
