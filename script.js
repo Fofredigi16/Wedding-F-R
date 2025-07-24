@@ -155,11 +155,15 @@ window.addEventListener("scroll", () => {
 
 /* Distribusi */
 // Ambil parameter dari URL
-const urlParams = new URLSearchParams(window.location.search);
-const gst = urlParams.get("to");
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const gst = urlParams.get("to");
 
-// Tampilkan nama jika ada
-if (gst) {
-  const decodedName = decodeURIComponent(gst.replace(/\+/g, " "));
-  document.getElementById("gstName").textContent = decodedName;
-}
+  if (gst) {
+    const decodedName = decodeURIComponent(gst.replace(/\+/g, " "));
+    const namaSpan = document.getElementById("gstName");
+    if (namaSpan) {
+      namaSpan.textContent = decodedName;
+    }
+  }
+});
