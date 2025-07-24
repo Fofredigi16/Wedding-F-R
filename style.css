@@ -326,7 +326,7 @@ body {
   text-align: center;
 }
 #Groombrides img {
-  border: 6px solid var(--slateGray);
+  border: 6px solid var(--greyblack);
   width: 200px;
   height: 320px;
   object-fit: cover;
