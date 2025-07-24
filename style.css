@@ -191,11 +191,15 @@ body {
 /* Kolom kiri untuk dekorasi/foto */
 .left-side {
   flex: 1;
-  background: url("img/background5.jpeg") center/cover no-repeat;
+  background: url("img/background3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   background-attachment: fixed;
   top: 0;
 }
+
 /* Kolom kanan untuk konten 480px */
 .right-content {
   width: 480px;
