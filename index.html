@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Fadli & Ochi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CountDown/simplyCountdown.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCyrzKXSIME9yAlIXuE8zcAdrehk9SrrFo",
+        authDomain: "weddingfadlirosi.firebaseapp.com",
+        projectId: "weddingfadlirosi",
+        storageBucket: "GANTI.appspot.cweddingfadlirosi.firebasestorage.app",
+        messagingSenderId: "773143374207",
+        appId: "1:773143374207:web:83a262d26b5dc817a0124a",
+      };
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Halaman 1 -->
+      <section id="landing" class="section visible">
+        <h1 class="thWeOf">The Wedding Of</h1>
+        <h1 class="FaddanRos">Fadli</h1>
+        <h1 class="FaddanRos">&</h1>
+        <h1 class="FaddanRos">Ochi</h1>
+        <p class="kpYt">Kepada Yth.</p>
+        <p class="gstName"><span id="gstName">Bapak/Ibu</span></p>
+        <button id="lihatUndangan" class="btn">Lihat Undangan</button>
+      </section>
+      <!-- Halaman 2 -->
+      <section id="mainContent" class="section hidden">
+        <div class="left-side"></div>
+        <div class="right-content">
+          <div data-aos="zoom-in" id="welcome">
+            <div class="inner-wrapper">
+              <div class="welCard">
+                <h1
+                  data-aos="fade-up"
+                  data-aos-duration="1800"
+                  class="theWedof"
+                >
+                  The Wedding Of
+                </h1>
+                <p data-aos="fade-up" data-aos-duration="1800" class="fadRos">
+                  Fadli
+                </p>
+                <p data-aos="fade-up" data-aos-duration="1800" class="danFR">
+                  Dan
+                </p>
+                <p data-aos="fade-up" data-aos-duration="1800" class="fadRos">
+                  Ochi
+                </p>
+                <p data-aos="fade-up" data-aos-duration="1800" class="weltang">
+                  02.08.2025
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Our Journey -->
+          <div id="Journey">
+            <div class="inner-wrapper">
+              <div class="journey-card">
+                <img src="img/DokWedd/gallery5.jpeg" class="journey-img" />
+                <div class="journey-content">
+                  <p
+                    data-aos="fade-up"
+                    data-aos-duration="1800"
+                    class="titlePad1"
+                  >
+                    Our Journey
+                  </p>
+                  <p
+                    data-aos="zoom-in"
+                    data-aos-duration="1800"
+                    data-aos-delay="200"
+                    class="textPad1"
+                  >
+                    "Dialah yang menciptakan kamu dari diri yang satu dan
+                    darinya. Dia menciptakan istrinya, agar dia merasa senang
+                    kepadanya. Maka setelah dicampurinya, istrinya itu
+                    mengandung kandungan yang ringan dan teruslah dia merasa
+                    ringan (beberapa waktu)"
+                  </p>
+                  <p
+                    class="textPad1"
+                    data-aos="zoom-in"
+                    data-aos-duration="1800"
+                  >
+                    Surah Al-A'raf Ayat 189
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Groom & Brides -->
+          <div id="Groombrides">
+            <div class="inner-wrapper">
+              <h1 class="titleGB" data-aos="zoom-in" data-aos-duration="1800">
+                Groom & Brides
+              </h1>
+              <img
+                src="img/fadli.jpeg"
+                alt="Foto2"
+                class="groom-img"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+              />
+              <p class="gbText" data-aos="fade-up" data-aos-duration="1800">
+                Fadli Akbar
+              </p>
+              <p
+                class="infoText"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="300"
+              >
+                Anak dari Alm. Bapak Abdul Ajis
+              </p>
+              <p
+                class="infoText"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="300"
+              >
+                & Ibu Liyani
+              </p>
+              <p class="Dan" data-aos="fade-up" data-aos-duration="1800">&</p>
+              <img
+                src="img/ochi.JPG"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+              />
+              <p class="gbText" data-aos="fade-up" data-aos-duration="1800">
+                Rosiana
+              </p>
+              <p
+                class="infoText"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="300"
+              >
+                Anak dari Bapak Ahmad Tohir
+              </p>
+              <p
+                class="infoText"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+                data-aos-delay="300"
+              >
+                & Ibu Rosita
+              </p>
+            </div>
+          </div>
+
+          <!-- Save The Date -->
+          <div id="savetheDate">
+            <div class="inner-wrapper">
+              <div class="savThe-card">
+                <img src="img/peacock.png" class="peacockImg" />
+                <h1 class="std1">Save The Date</h1>
+                <p class="tanggl">Sabtu, 02 Agustus 2025</p>
+                <div class="simply-countdown"></div>
+                <img src="img/FloralB3.png" class="floral-svg" />
+                <a
+                  href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Fadli+%26+Ochi&dates=20250629T020000Z/20250629T070000Z&details=Acara+pernikahan+Fadli+dan+Ochi&location=Cimanggu,+Leuwisadeng&sf=true&output=xml"
+                  target="_blank"
+                  class="calndr"
+                  >Tambahkan Jadwal</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Wedding Event -->
+          <div id="weddEvent">
+            <div class="inner-wrapper">
+              <h1
+                class="acara-pernikahan"
+                data-aos="fade-up"
+                data-aos-duration="1800"
+              >
+                Acara Pernikahan
+              </h1>
+              <p
+                class="kedatangan"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                data-aos-duration="1800"
+              >
+                Atas karunia Tuhan yang maha Esa, dengan senang hati kami
+                mengumumkan pernikahan kami kepada keluarga, sanak saudara dan
+                teman-teman kami. Kami mohon untuk kehadirannya dihari istimewa
+                kami.
+              </p>
+              <div class="weddEvent-card">
+                <h2 class="akdres">RESEPSI</h2>
+                <div class="cusLine">Sabtu</div>
+                <p class="akretgl"></p>
+                <p class="akretgl">02 Agustus 2025</p>
+                <p class="akretgl">08.00 - Selesai</p>
+                <div class="cusLine">
+                  <span class="icon-center">
+                    <img src="svg/home.svg" alt="icon" />
+                  </span>
+                </div>
+                <p class="rumWan" data-aos="zoom-in" data-aos-duration="1800">
+                  Rumah Mempelai Wanita
+                </p>
+                <p class="cimanLeu" data-aos="zoom-in" data-aos-duration="1800">
+                  Kp.Cibaregbeg &nbsp; RT06/RW04 <br />
+                  Desa Tenjo, &nbsp; Kecamatan Tenjo, <br />
+                  Kabupaten Bogor
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/WnzcwrcS9LqBvWu69"
+                  target="_blank"
+                  class="vieLoc btn-lg"
+                >
+                  Lihat Lokasi
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RSVP, Wedding Gift -->
+          <div id="RSVP-weddingGift">
+            <div class="inner-wrapper">
+              <div
+                class="rsvp-card"
+                data-aos="zoom-in-up"
+                data-aos-duration="2000"
+              >
+                <p class="rs-wed">RSVP</p>
+                <p class="infreswed">
+                  Mohon untuk konfirmasinya agar kami dapat mempersiapkan
+                  semuanya dengan lebih baik atas kehadiran tamu undangan di
+                  acara pernikahan kami. Silakan isi form RSVP berikut:
+                </p>
+                <form id="rsvpForm" class="styled-form">
+                  <label for="rsvpName">Nama :</label>
+                  <input
+                    type="text"
+                    id="rsvpName"
+                    placeholder="Nama"
+                    required
+                  />
+                  <label for="rsvpAddress">Alamat :</label>
+                  <input
+                    type="text"
+                    id="rsvpAddress"
+                    placeholder="Alamat"
+                    required
+                  />
+                  <label for="rsvpAttend">Konfirmasi Kehadiran :</label>
+                  <select id="rsvpAttend" required>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                  </select>
+                  <button type="submit" class="rsBtn btn-lg">Submit</button>
+                </form>
+                <div id="rsvpContainer"></div>
+                <div class="pagination">
+                  <button onclick="prevRsvpPage()">← Previous</button>
+                  <span id="rsvpPageNumbers"></span>
+                  <button onclick="nextRsvpPage()">Next →</button>
+                </div>
+                <div id="rsvpList"></div>
+              </div>
+              <div
+                class="wedGift-card"
+                data-aos="zoom-in-up"
+                data-aos-duration="2000"
+              >
+                <p class="rs-wed">Wedding Gift</p>
+                <p class="infreswed">
+                  Kehadiran anda merupakan hadiah tersendiri untuk kami. Namun,
+                  jika ingin memberi kami sesuatu yang lain, maka silahkan untuk
+                  menekan tombol informasi lebih lanjut :
+                </p>
+                <button class="giftBtn btn-lg" onclick="toggleGift()">
+                  Wedding Gift
+                </button>
+                <div id="giftInfo" class="gift-info hidden">
+                  <div class="rekening-blok">
+                    <p><strong>Nama:</strong> Fadli Akbar</p>
+                    <p><strong>E-Money:</strong> DANA</p>
+                    <p>
+                      <strong>No. Rekening:</strong
+                      ><span id="rekFadli">0895392081920 </span>
+                    </p>
+                    <img src="img/dana.png" class="domDan" />
+                    <button class="gifBt" onclick="copyRek('rekFadli')">
+                      Salin Nomor
+                    </button>
+                  </div>
+                  <div class="rekening-blok">
+                    <p><strong>Nama:</strong> Rosiana</p>
+                    <p><strong>E-Money:</strong> DANA</p>
+                    <p>
+                      <strong>No. Rekening:</strong
+                      ><span id="rekRosiana"> 085771203249</span>
+                    </p>
+                    <img src="img/dana.png" class="domDan" />
+                    <button class="gifBt" onclick="copyRek('rekRosiana')">
+                      Salin Nomor
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Gallery -->
+          <div id="ourGallery">
+            <p class="glrKami">Galeri Kami</p>
+            <div class="FotUndang grid-gallery">
+              <div class="photo-box tall">
+                <img src="img/DokWedd/gallery1.jpeg" alt="Foto 1" />
+              </div>
+              <div class="photo-box">
+                <img src="img/DokWedd/gallery2.jpeg" alt="Foto 2" />
+              </div>
+              <div class="photo-box wide">
+                <img src="img/DokWedd/gallery5.jpeg" alt="Foto 5" />
+              </div>
+              <div class="photo-box">
+                <img src="img/DokWedd/gallery13.jpeg" alt="Foto 4" />
+              </div>
+              <div class="photo-box tall">
+                <img src="img/DokWedd/gallery3.jpeg" alt="Foto 3" />
+              </div>
+              <div class="photo-box">
+                <img src="img/DokWedd/gallery6.jpeg" alt="Foto 6" />
+              </div>
+              <div class="photo-box">
+                <img src="img/DokWedd/gallery10.JPG" alt="Foto 7" />
+              </div>
+              <div class="photo-box wide">
+                <img src="img/DokWedd/gallery8.jpeg" alt="Foto 8" />
+              </div>
+              <div class="photo-box">
+                <img src="img/DokWedd/gallery9.jpeg" alt="Foto 9" />
+              </div>
+              <div class="photo-box tall">
+                <img src="img/DokWedd/gallery11.jpeg" alt="Foto 10" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Wishes -->
+          <div id="bestWishes">
+            <div class="inner-wrapper">
+              <img class="imSail" src="svg/sailship.svg" />
+              <p class="sbtxt">Ucapan & Do'a</p>
+              <p class="subtext">
+                Harapan indah serta do'a tulus anda adalah semangat kami untuk
+                memulai bersama perjalanan baru ini:
+              </p>
+              <form id="wishForm">
+                <label for="name">Nama :</label>
+                <input
+                  type="text"
+                  id="guestName"
+                  placeholder="Nama"
+                  style="font-family: 'Merriweather', serif"
+                  maxlength="30"
+                  required
+                />
+                <label for="name">Harapan Terbaikmu :</label>
+                <textarea
+                  id="guestMessage"
+                  placeholder="Harapan Terbaikmu"
+                  style="font-family: 'Merriweather', serif"
+                  maxlength="500"
+                  required
+                ></textarea>
+                <p id="charCount">0 / 500</p>
+                <button type="submit" class="wisheBtn">Send Wishes</button>
+              </form>
+              <div id="wishContainer"></div>
+              <div class="pagination">
+                <button onclick="prevPage()">← Previous</button>
+                <span id="pageNumbers"></span>
+                <button onclick="nextPage()">Next →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design By -->
+          <div id="desainBy">
+            <div class="inner-wrapper">
+              <p class="desBor">Design By IborDigi</p>
+              <p class="desBordigi">© 2025 IborDigi. All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Tombol Kontrol Musik -->
+    <div id="musicControl">
+      <button id="toggleMusic" aria-label="Putar Lagu">♫</button>
+    </div>
+    <!-- Audio Musik -->
+    <audio id="bgMusic" loop>
+      <source src="audio/gamelan.mp3" type="audio/mp3" />
+      Browser tidak mendukung audio.
+    </audio>
+
+    <script src="script.js"></script>
+    <script>
+      const guestMessage = document.getElementById("guestMessage");
+      const charCount = document.getElementById("charCount");
+      const wishForm = document.getElementById("wishForm");
+      const wishContainer = document.getElementById("wishContainer");
+
+      let wishes = JSON.parse(localStorage.getItem("wishes")) || [];
+      const perPage = 3;
+      let currentPage = 1;
+
+      guestMessage.addEventListener("input", () => {
+        charCount.textContent = `${guestMessage.value.length} / 500`;
+      });
+
+      wishForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("guestName").value.trim();
+        const message = guestMessage.value.trim();
+
+        if (name && message) {
+          wishes.unshift({ name, message });
+          localStorage.setItem("wishes", JSON.stringify(wishes));
+          wishForm.reset();
+          charCount.textContent = "0 / 500";
+          currentPage = 1;
+          renderWishes();
+        }
+      });
+
+      function renderWishes() {
+        wishContainer.innerHTML = "";
+        const start = (currentPage - 1) * perPage;
+        const end = start + perPage;
+        const paginated = wishes.slice(start, end);
+
+        paginated.forEach(({ name, message }) => {
+          const div = document.createElement("div");
+          div.className = "wish-item";
+          div.innerHTML = `<strong>${name}</strong><p>${message}</p>`;
+          wishContainer.appendChild(div);
+        });
+
+        renderPageNumbers();
+      }
+
+      function renderPageNumbers() {
+        const totalPages = Math.ceil(wishes.length / perPage);
+        const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1)
+          .map(
+            (num) =>
+              `<button onclick="goToPage(${num})" ${
+                num === currentPage ? 'style="font-weight:bold"' : ""
+              }>${num}</button>`
+          )
+          .join(" ");
+        document.getElementById("pageNumbers").innerHTML = pageNumbers;
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        renderWishes();
+      }
+      function nextPage() {
+        const totalPages = Math.ceil(wishes.length / perPage);
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderWishes();
+        }
+      }
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          renderWishes();
+        }
+      }
+
+      renderWishes();
+    </script>
+    <script src="CountDown/simplyCountdown.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      // --- RSVP FIREBASE BACKEND ---
+      const rsvpForm = document.getElementById("rsvpForm");
+      const rsvpList = document.getElementById("rsvpList");
+      const rsvpPageNumbers = document.getElementById("rsvpPageNumbers");
+      const rsvpPerPage = 3;
+      let rsvpCurrentPage = 1;
+      let rsvpData = [];
+
+      rsvpForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const name = document.getElementById("rsvpName").value.trim();
+        const address = document.getElementById("rsvpAddress").value.trim();
+        const attend = document.getElementById("rsvpAttend").value;
+
+        if (name && address) {
+          try {
+            await db.collection("rsvp").add({
+              name,
+              address,
+              attend,
+              timestamp: new Date().toISOString(),
+            });
+            rsvpForm.reset();
+            alert("RSVP kamu berhasil dikirim!");
+          } catch (err) {
+            alert("Gagal mengirim RSVP. Coba lagi nanti.");
+            console.error(err);
+          }
+        }
+      });
+
+      function renderRSVP() {
+        rsvpList.innerHTML = "";
+        const start = (rsvpCurrentPage - 1) * rsvpPerPage;
+        const end = start + rsvpPerPage;
+        const currentData = rsvpData.slice(start, end);
+
+        currentData.forEach((entry) => {
+          const div = document.createElement("div");
+          div.className = "rsvp-item";
+          div.innerHTML = `<strong>${entry.name}</strong> dari ${entry.address} &mdash; <em>${entry.attend}</em>`;
+          rsvpList.appendChild(div);
+        });
+
+        renderPageNumbers();
+      }
+
+      function renderPageNumbers() {
+        const totalPages = Math.ceil(rsvpData.length / rsvpPerPage);
+        rsvpPageNumbers.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = i;
+          if (i === rsvpCurrentPage) btn.style.fontWeight = "bold";
+          btn.onclick = () => {
+            rsvpCurrentPage = i;
+            renderRSVP();
+          };
+          rsvpPageNumbers.appendChild(btn);
+        }
+      }
+
+      function prevRsvpPage() {
+        if (rsvpCurrentPage > 1) {
+          rsvpCurrentPage--;
+          renderRSVP();
+        }
+      }
+      function nextRsvpPage() {
+        const totalPages = Math.ceil(rsvpData.length / rsvpPerPage);
+        if (rsvpCurrentPage < totalPages) {
+          rsvpCurrentPage++;
+          renderRSVP();
+        }
+      }
+
+      db.collection("rsvp")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          rsvpData = snapshot.docs.map((doc) => doc.data());
+          renderRSVP();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,994 @@
+:root {
+  --bg: #080808;
+  --tifBlue: #0abab5;
+  --cadetBlue: #838e99;
+  --white: #ffffff;
+  --tealLight: #f1e9df;
+  --slateGray: #404e6b;
+  --taupe: #474747;
+  --greyblack: #001833;
+  --shadow1: 0 2px 2px rgba(0 0 0 / 0.5);
+  --shadow2: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Merriweather", serif;
+  background-color: var(--white);
+  color: var(--greyblack);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+#navbar {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--tealLight);
+  backdrop-filter: blur(7px);
+  padding: 1rem;
+  font-family: "Merriweather", serif;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  position: relative;
+}
+.navbar-content {
+  text-align: center;
+}
+#navbar .navbar-content h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--greyblack);
+  font-weight: 500;
+}
+#navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+}
+.hidden {
+  display: none;
+}
+.container {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  box-shadow: var(--shadow);
+}
+.section {
+  width: 100%;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  background-color: var(--bg);
+  overflow-y: auto;
+}
+.section.visible {
+  display: flex;
+  animation: fadeIn 0.8s ease;
+}
+#landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+#landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/background6.jpg") no-repeat center center/cover;
+  filter: brightness(0.6) contrast(1);
+  z-index: 1;
+}
+
+#landing * {
+  position: relative;
+  z-index: 2;
+}
+
+.FaddanRos {
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  color: var(--white);
+}
+.thWeOf {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  color: var(--white);
+}
+.kpYt {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.3rem;
+  margin-top: 0.2rem;
+  color: var(--white);
+}
+#gstName {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  color: var(--white);
+}
+.btn {
+  margin-top: 2rem;
+  padding: 0.6rem 1.1rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 50px;
+  color: var(--slateGray);
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.content-section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.inner-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#mainContent {
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Kolom kiri untuk dekorasi/foto */
+.left-side {
+  flex: 1;
+  background: url("img/background5.jpeg") center/cover no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+  top: 0;
+}
+/* Kolom kanan untuk konten 480px */
+.right-content {
+  width: 480px;
+  min-height: 100vh;
+  background-color: #fff; /* atau warna yang sesuai tone */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome {
+  min-height: 100vh;
+  padding: 2rem;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/background3-5.jpg") no-repeat center center/cover;
+  z-index: 1;
+}
+#welcome * {
+  position: relative;
+  z-index: 2;
+}
+.welCard {
+  width: 100%;
+  max-width: 350px;
+  bottom: 2rem;
+  border-radius: 20px;
+}
+.theWedof {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-top: 0.2rem;
+  color: var(--greyblack);
+}
+.fadRos {
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 4rem;
+  color: var(--greyblack);
+}
+.danFR {
+  font-family: "Great Vibes", cursive;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-top: 0.2rem;
+  color: var(--greyblack);
+}
+.weltang {
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  color: var(--greyblack);
+}
+#Journey {
+  background: var(--slateGray);
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.journey-card {
+  width: 100%;
+  max-width: 350px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+}
+.journey-img {
+  width: 100%;
+  display: block;
+}
+.journey-content {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.titlePad1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  color: var(--greyblack);
+}
+.textPad1 {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--greyblack);
+  line-height: 1.6;
+}
+#Groombrides {
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+#Groombrides img {
+  border: 6px solid var(--tealLight);
+  width: 200px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50% / 30%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: var(--shadow2);
+}
+.titleGB {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  color: var(--greyblack);
+}
+.gbText {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: var(--greyblack);
+}
+.Dan {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem;
+  color: var(--greyblack);
+}
+.infoText {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: var(--greyblack);
+}
+#savetheDate {
+  background: url(img/background3-7.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.savThe-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 600px;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  border-radius: 25px;
+  overflow: hidden;
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 5px solid var(--tealLight);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+}
+.peacockImg {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.std1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.8rem;
+  color: var(--greyblack);
+}
+.tanggl {
+  padding-bottom: 2rem;
+  margin-bottom: 1.4rem;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--greyblack);
+}
+.floral-svg {
+  width: 220px;
+  height: 100px;
+  justify-content: center;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.calndr {
+  display: inline-block;
+  font-family: "Merriweather", serif;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--greyblack);
+  border: none;
+  border-radius: 50px;
+  color: var(--tealLight);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.calndr:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+[data-aos][class*="calndr"] {
+  transform: none !important; /* Hapus efek transform dari AOS pas selesai */
+}
+#weddEvent {
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.weddEvent-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 600px;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  border-radius: 50% / 25%;
+  overflow: visible;
+  background: url(img/background3-51.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.8);
+}
+.acara-pernikahan {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: var(--greyblack);
+}
+.kedatangan {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  color: var(--greyblack);
+  max-width: 400px;
+  line-height: 1.6;
+}
+.akdres {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  margin-top: 4.5rem;
+  font-size: 2.5rem;
+  color: var(--greyblack);
+}
+.cusLine {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1rem auto;
+  width: 65%;
+  max-width: 300px;
+}
+.cusLine::before,
+.cusLine::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: var(--greyblack);
+}
+.icon-center {
+  padding: 0 10px;
+}
+.icon-center img {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+.akretgl {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--greyblack);
+}
+.rumWan {
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--greyblack);
+}
+.cimanLeu {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--greyblack);
+}
+.vieLoc {
+  display: inline-block;
+  font-family: "Merriweather", serif;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--greyblack);
+  border: none;
+  border-radius: 50px;
+  color: var(--tealLight);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.vieLoc:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+[data-aos][class*="vieLoc"] {
+  transform: none !important; /* Hapus efek transform dari AOS pas selesai */
+}
+#RSVP-weddingGift {
+  background: url(img/background3-7.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.rsvp-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 400px;
+  margin-top: 2.5rem;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  border: 5px solid var(--slateGray);
+  overflow: hidden;
+  box-shadow: 0 0px 22px rgba(0, 0, 0, 0.4);
+}
+#rsvpList {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+.rsvp-item {
+  background-color: var(--white);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  font-family: "Merriweather", serif;
+  color: var(--greyblack);
+}
+.rsvp-item {
+  background: #fff;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  color: var(--greyblack);
+  text-align: left;
+  font-size: 0.95rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Merriweather", serif;
+}
+.pagination button:hover {
+  background-color: var(--slateGray);
+  color: white;
+}
+.wedGift-card {
+  width: 100%;
+  max-width: 350px;
+  max-height: 750px;
+  margin-top: 2rem;
+  padding: 3rem 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--white);
+  border: 5px solid var(--slateGray);
+  box-shadow: 0 0px 22px rgba(0, 0, 0, 0.4);
+}
+.rekening-blok {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+}
+.gift-info {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--white);
+  color: #008dec;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Merriweather", serif;
+  font-size: 0.95rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.domDan {
+  width: 120px;
+  height: 35px;
+  margin-top: 0.8rem;
+}
+.gifBt {
+  display: block;
+  font-family: "Merriweather", serif;
+  padding: 0.2rem 0.8rem;
+  margin: 0.8rem auto 0;
+  background-color: #008dec;
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  box-shadow: var(--shadow2);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gifBt:hover {
+  transform: scale(1.1);
+}
+.hidden {
+  display: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rs-wed {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--greyblack);
+}
+.infreswed {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: var(--greyblack);
+  line-height: 1.6;
+}
+.styled-form {
+  font-family: "Merriweather", serif;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.styled-form label {
+  font-family: "Merriweather", serif;
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--greyblack);
+}
+.styled-form input,
+.styled-form select {
+  font-family: "Merriweather", serif;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--greyblack);
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  color: var(--greyblack);
+  transition: border-color 0.3s ease;
+}
+.styled-form input:focus,
+.styled-form select:focus {
+  outline: none;
+  border-bottom: 2px solid var(--cadetBlue);
+}
+.rsBtn {
+  display: block;
+  font-family: "Merriweather", serif;
+  padding: 0.6rem 7rem;
+  margin: 2rem auto 0;
+  background-color: var(--greyblack);
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  box-shadow: var(--shadow2);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.rsBtn:hover {
+  transform: scale(1.1);
+}
+.giftBtn {
+  font-family: "Merriweather", serif;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--greyblack);
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  box-shadow: var(--shadow2);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.giftBtn:hover {
+  transform: scale(1.1);
+}
+#ourGallery {
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.glrKami {
+  color: var(--greyblack);
+  font-family: "Great Vibes", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+.FotUndang {
+  column-count: 2;
+  column-gap: 1rem;
+  padding: 1rem 0;
+}
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px; /* biar gak terlalu mekar di layar besar */
+  margin: 0 auto;
+  padding: 1rem;
+}
+.photo-box {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.photo-box:hover img {
+  transform: scale(1.05);
+}
+.photo-box.tall {
+  grid-row: span 1;
+}
+.photo-box.wide {
+  grid-column: span 2;
+}
+@media (max-width: 600px) {
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+}
+#bestWishes {
+  background: url(svg/ornamen1R.svg) left -5px top repeat-y,
+    url(svg/ornamen1L.svg) right -5px top repeat-y;
+  background-color: var(--slateGray);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.imSail {
+  width: 180px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+.sbtxt {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: var(--white);
+  max-width: 310px;
+  margin-inline: auto;
+  line-height: 2;
+}
+.subtext {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  max-width: 310px;
+  margin-inline: auto;
+  line-height: 2;
+}
+#guestName {
+  font-family: "Merriweather", serif;
+  font-size: 0.8em;
+}
+#wishForm label {
+  display: block;
+  margin-top: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: var(--white);
+}
+#wishForm textarea {
+  height: 120px;
+}
+#wishForm input,
+#wishForm textarea {
+  width: 100%;
+  max-width: 310px;
+  margin: 0.5rem auto;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: block;
+  font-family: inherit;
+}
+#charCount {
+  font-family: "Merriweather", serif;
+  font-size: 0.8rem;
+  color: var(--white);
+  text-align: right;
+  max-width: 310px;
+  margin: auto;
+}
+.wisheBtn {
+  font-family: "Merriweather", serif;
+  padding: 0.6rem 1rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 10px;
+  color: var(--greyblack);
+  box-shadow: var(--shadow2);
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+#wishContainer {
+  font-family: "Merriweather", serif;
+  margin-top: 2rem;
+  max-width: 310px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.wish-item {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow2);
+  text-align: left;
+}
+.wish-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#desainBy {
+  background: url(img/background3-6.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 10vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.desBor {
+  margin-bottom: 0.6rem;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--greyblack);
+}
+.desBordigi {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--greyblack);
+}
+
+/* backsound */
+#musicControl {
+  position: fixed;
+  bottom: 120px;
+  right: 10px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#musicControl.show {
+  opacity: 1;
+  visibility: visible;
+}
+#toggleMusic {
+  background-color: var(--tealLight);
+  color: var(--greyblack);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow2);
+  transition: transform 0.3s ease;
+}
+#toggleMusic:hover {
+  transform: scale(1.1);
+}
