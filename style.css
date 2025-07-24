@@ -326,7 +326,7 @@ body {
   text-align: center;
 }
 #Groombrides img {
-  border: 6px solid var(--tealLight);
+  border: 6px solid var(--slateGray);
   width: 200px;
   height: 320px;
   object-fit: cover;
@@ -387,7 +387,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 5px solid var(--tealLight);
+  border: 5px solid var(--slateGray);
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
 }
 .peacockImg {
